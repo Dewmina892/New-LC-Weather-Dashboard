@@ -75,5 +75,7 @@ topButton.addEventListener("click", scrollToTop);
 getUserLocation();
 
 const API_KEY = import.meta.env.VITE_WEATHER_API_KEY;
-
 console.log("API KEY =", API_KEY);
+
+console.log(import.meta.env);
+console.log("API KEY:", API_KEY);
