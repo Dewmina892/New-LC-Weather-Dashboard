@@ -4,7 +4,7 @@ import { handleError } from "./handleError.js";
 import { currentWeatherData } from "./currentWeatherData.js";
 import { weatherForecastData } from "./weatherForecastData.js";
 
-const API_KEY = "ede95b4e931a10514a12b454d0a0c037";
+const API_KEY = import.meta.env.VITE_API_KEY || "ede95b4e931a10514a12b454d0a0c037";
 
 
 const searchBoxInput = document.querySelector(".search-box-input");
@@ -73,9 +73,3 @@ ctaButton.addEventListener("click", () => {
 topButton.addEventListener("click", scrollToTop);
 
 getUserLocation();
-
-const API_KEY = "ede95b4e931a10514a12b454d0a0c037";
-console.log("API KEY =", API_KEY);
-
-console.log(import.meta.env);
-console.log("API KEY:", API_KEY);
