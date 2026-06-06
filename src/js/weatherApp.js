@@ -4,7 +4,10 @@ import { handleError } from "./handleError.js";
 import { currentWeatherData } from "./currentWeatherData.js";
 import { weatherForecastData } from "./weatherForecastData.js";
 
-const API_KEY = "ede95b4e931a10514a12b454d0a0c037"
+const API_KEY = import.meta.env.VITE_WEATHER_API_KEY;
+fetch(
+  `https://api.openweathermap.org/data/2.5/weather?q=Colombo&units=metric&appid=${API_KEY}`
+)
 
 const searchBoxInput = document.querySelector(".search-box-input");
 const gpsButton = document.querySelector(".gps-button");
