@@ -73,3 +73,7 @@ ctaButton.addEventListener("click", () => {
 topButton.addEventListener("click", scrollToTop);
 
 getUserLocation();
+
+const API_KEY = import.meta.env.VITE_WEATHER_API_KEY;
+
+console.log("API KEY =", API_KEY);
